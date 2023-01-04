@@ -102,9 +102,14 @@ article .valor {
 img {
     height: 87px;
     width: 144px;
-    border-radius: 4px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.refri img{
     object-fit: contain;
-    display:block;
+}
+.sobremesa img{
+    object-fit: fill;
 }
 footer {
     background-color: #FFFFFF;
