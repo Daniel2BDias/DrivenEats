@@ -103,7 +103,7 @@ img {
     height: 87px;
     width: 144px;
     border-radius: 4px;
-    object-fit: fill;
+    object-fit: contain;
     display:block;
 }
 footer {
