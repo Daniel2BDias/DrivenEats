@@ -48,7 +48,7 @@ div {
     width: 100%;
 }
 div p {
-    margin: 10px 0 0 1.2%;
+    margin: 10px 0 0 10px;
     color: #333333;
 }
 section {
@@ -137,4 +137,11 @@ footer button {
     letter-spacing: 0.018em;
     text-align: center;
     white-space: pre-wrap;
+}
+.selected {
+    background-color: green;
+    border-radius: 10px;
+    border: 1px;
+    border-color: green;
+    transform: scale(1.1);
 }
