@@ -10,10 +10,12 @@ function selecionadoP(principal){
 
     select.classList.add("selected");
 
-     const contem = select.classList.contain("selected");
-     if(contem === true){
-        select.classList.toggle("selected");
-     }
+    if(document.querySelectorAll('.selected').length === 3){
+
+        document.querySelector(".botao").removeAttribute("disabled");
+        document.querySelector(".botao").innerHTML = "Finalizar Pedido";
+       }
+
 }
 function selecionadoB(bebida){
 
@@ -26,6 +28,12 @@ function selecionadoB(bebida){
    const select = document.querySelector(bebida);
 
    select.classList.add("selected");
+
+   if(document.querySelectorAll('.selected').length === 3){
+
+    document.querySelector(".botao").removeAttribute("disabled");
+    document.querySelector(".botao").innerHTML = "Finalizar Pedido";
+   }
 }
 function selecionadoS(sobremesa){
 
@@ -38,4 +46,11 @@ function selecionadoS(sobremesa){
    const select = document.querySelector(sobremesa);
 
    select.classList.add("selected");
+
+   if(document.querySelectorAll('.selected').length === 3){
+
+    document.querySelector(".botao").classList.add("finalizar")
+    document.querySelector(".botao").removeAttribute("disabled");
+    document.querySelector(".botao").innerHTML = "Finalizar Pedido";
+   }
 }
