@@ -12,6 +12,7 @@ function selecionadoP(principal){
 
     if(document.querySelectorAll('.selected').length === 3){
 
+        document.querySelector(".botao").classList.add("finalizar")
         document.querySelector(".botao").removeAttribute("disabled");
         document.querySelector(".botao").innerHTML = "Finalizar Pedido";
        }
@@ -31,6 +32,7 @@ function selecionadoB(bebida){
 
    if(document.querySelectorAll('.selected').length === 3){
 
+    document.querySelector(".botao").classList.add("finalizar")
     document.querySelector(".botao").removeAttribute("disabled");
     document.querySelector(".botao").innerHTML = "Finalizar Pedido";
    }
