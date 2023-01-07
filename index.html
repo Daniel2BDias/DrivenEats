@@ -13,7 +13,31 @@
     <h1>DrivenEats</h1>
     <p>Sua comida em 6 minutos</p>
 </header>
-<div>
+<aside class="hidden">
+    <p>Confirme seu pedido</p>
+    <div class="resumo">
+        <div class="resumoP">
+            <div class="nomeP"></div>
+            <div class="valorP"></div>
+        </div>
+        <div class="resumoB">
+            <div class="nomeB"></div>
+            <div class="valorB"></div>
+        </div>
+        <div class="resumoS">
+            <div class="nomeS"></div>
+            <div class="valorS"></div>
+        </div>
+        <div class="total">
+            <div class="nomeT">Total</div>
+            <div class="valorT"></div>
+        </div>
+    </div>
+    <button onclick="direcionarZap()">Tudo certo, pode pedir!</button>
+    <p onclick="setHidden()">Cancelar</p>
+</aside>
+<div class="correcao1"></div>
+<div class="central">
     <p>Primeiro, seu prato</p>
 <section class="principal">
 <article class="feijuca" onclick="selecionadoP('.feijuca')">
@@ -21,7 +45,7 @@
         <h2>Feijoada Completa</h2>
         <p>Um Clássico</p>
         <p>(5 pessoas)</p>
-        <p class="valor">R$ 189,90</p>
+        <h3 class="valor">R$ 189,90</h3>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
 </article>
 <article class="baiao" onclick="selecionadoP('.baiao')">
@@ -89,8 +113,9 @@
     </article>
 </section>
 </div>
+<div class="correcao2"></div>
 <footer>
-    <button class="botao" disabled>Selecione os 3 itens
+    <button class="botao" disabled onclick="confirmarPedido('.hidden', '.central', 'header', 'footer')">Selecione os 3 itens
 para fechar o pedido</button>
 </footer>
 <script src="scripts.js"></script>
