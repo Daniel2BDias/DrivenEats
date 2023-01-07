@@ -73,7 +73,7 @@ article {
     align-items: flex-start;
     text-align: left;
     margin: 0 10px;
-    box-shadow: 1px 1px 1px lightgray;
+    box-shadow: 3px 3px 3px rgb(155, 147, 147);
     box-sizing: border-box;
     white-space: pre-wrap;
     position: relative;
@@ -151,8 +151,8 @@ footer button {
     text-align: center;
     white-space: pre-wrap;
 }
-.correcao1, {
-    
+.correcao1 {
+
     position: fixed;
     top: 0;
     left: 0;
@@ -204,6 +204,7 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 5px #bbb6b6;
 }
 aside p {
     color: #FFFFFF;
@@ -224,6 +225,19 @@ aside .resumo {
 aside .resumo .total {
     font-weight: 700;
     
+}
+
+.cancelar:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.confirma:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background: radial-gradient( white, #8ef38c, #3bb95f);
+    color:#000000;
+    border: 1px solid rgb(190, 245, 178)
 }
 
 .resumoP, .resumoB, .resumoS, .total {
