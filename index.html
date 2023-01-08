@@ -13,7 +13,7 @@
     <h1>DrivenEats</h1>
     <p>Sua comida em 6 minutos</p>
 </header>
-<aside class="hidden">
+<aside data-test="confirm-order-modal" class="hidden">
     <p>Confirme seu pedido</p>
     <div class="resumo">
         <div class="resumoP">
@@ -33,8 +33,8 @@
             <div class="valorT"></div>
         </div>
     </div>
-    <button class="confirma" onclick="direcionarZap()">Tudo certo, pode pedir!</button>
-    <p class="cancelar" onclick="setHidden()">Cancelar</p>
+    <button data-test="confirm-order-btn" class="confirma" onclick="direcionarZap()">Tudo certo, pode pedir!</button>
+    <p data-test="cancel-order-btn" class="cancelar" onclick="setHidden()">Cancelar</p>
 </aside>
 <div class="correcao1"></div>
 <div class="central">
@@ -42,25 +42,25 @@
 <section class="principal">
 <article data-test="dish" class="feijuca" onclick="selecionadoP('.feijuca')">
     <img src="images/feijuca.jpg">
-        <h2>Feijoada Completa</h2>
+        <h2 data-test="item-name">Feijoada Completa</h2>
         <p>Um Clássico</p>
         <p>(5 pessoas)</p>
-        <p data-test="item-price" class="valor">R$ 189,90</p>
+        <p data-test="item-price" class="valor">R$ 189.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
 </article>
 <article data-test="dish" class="baiao" onclick="selecionadoP('.baiao')">
     <img src="images/baiao.jpg">
-        <h2>Baião de Dois</h2>
+        <h2 data-test="item-name">Baião de Dois</h2>
         <p>Outro Clássico</p>
         <p>(5 pessoas)</p>
-        <p data-test="item-price" class="valor">R$ 149,90</p>
+        <p data-test="item-price" class="valor">R$ 149.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
 </article>
 <article data-test="dish" class="virado" onclick="selecionadoP('.virado')">
     <img src="images/virado.jpg">
-        <h2>Virado à Paulista</h2>
+        <h2 data-test="item-name">Virado à Paulista</h2>
         <p>Ainda Outro Clássico<br>(5 pessoas)</p>
-        <p data-test="item-price" class="valor">R$ 129,90</p>
+        <p data-test="item-price" class="valor">R$ 129.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
 </article>
 </section>
@@ -68,23 +68,23 @@
 <section class="bebida">
     <article data-test="drink" class="coca" onclick="selecionadoB('.coca')">
         <img src="images/coca-cola.png">
-        <h2>Coca-cola</h2>
+        <h2 data-test="item-name">Coca-cola</h2>
         <p>Lata 350ml</p>
-        <p data-test="item-price" class="valor">R$ 4,90</p>
+        <p data-test="item-price" class="valor">R$ 4.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
     </article>
     <article data-test="drink" class="guarana" onclick="selecionadoB('.guarana')">
         <img src="images/guarana.jpg">
-        <h2>Guaraná Antártica</h2>
+        <h2 data-test="item-name">Guaraná Antártica</h2>
         <p>Lata 350ml</p>
-        <p data-test="item-price" class="valor">R$ 4,90</p>
+        <p data-test="item-price" class="valor">R$ 4.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
     </article>
     <article data-test="drink" class="jesus" onclick="selecionadoB('.jesus')">
         <img src="images/jesus.jpg">
-        <h2>Jesus</h2>
+        <h2 data-test="item-name">Jesus</h2>
         <p>Lata 350ml</p>
-        <p data-test="item-price" class="valor">R$ 4,90</p>
+        <p data-test="item-price" class="valor">R$ 4.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
     </article>
 </section>
@@ -92,23 +92,23 @@
 <section class="sobremesa">
     <article data-test="dessert" class="brigs" onclick="selecionadoS('.brigs')">
         <img src="images/brigadeirao.jpg">
-        <h2>Brigadeirao</h2>
+        <h2 data-test="item-name">Brigadeirao</h2>
         <p>Pudim, só que de brigadeiro<br></p>
-        <p data-test="item-price" class="valor">R$ 19,90</p>
+        <p data-test="item-price" class="valor">R$ 19.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
     </article>
     <article data-test="dessert" class="pudim" onclick="selecionadoS('.pudim')">
         <img src="images/pudim.png">
-        <h2>Pudim de Leite</h2>
+        <h2 data-test="item-name">Pudim de Leite</h2>
         <p>Pudim de Leite Clássico</p>
-        <p data-test="item-price" class="valor">R$ 19,90</p>
+        <p data-test="item-price" class="valor">R$ 19.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
     </article>
     <article data-test="dessert" class="quindao" onclick="selecionadoS('.quindao')" onclick="removeSelect('.quindao')">
         <img src="images/quindao.jpg">
-        <h2>Quindão</h2>
+        <h2 data-test="item-name">Quindão</h2>
         <p>Pudim, só que com muita gema de ovo</p>
-        <p data-test="item-price" class="valor">R$ 19,90</p>
+        <p data-test="item-price" class="valor">R$ 19.90</p>
         <ion-icon name="checkmark-circle-sharp"></ion-icon>
     </article>
 </section>

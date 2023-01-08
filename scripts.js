@@ -59,28 +59,58 @@ function selecionadoS(sobremesa){
 
     document.querySelector(".botao").classList.add("finalizar")
     document.querySelector(".botao").removeAttribute("disabled");
-    document.querySelector(".botao").innerHTML = "Finalizar Pedido";
+    document.querySelector(".botao").innerHTML = "Fechar Pedido";
    }
 }
 
-function confirmarPedido(hidden, central, header, footer){
+function confirmarPedido(){
 
     const pedidoP = document.querySelector('.nomeP');
     const textoP = document.querySelector('.principal .selected h2').innerHTML;
 
-    const totalP = document.querySelector('.valorP').innerHTML;
+    const totalP = document.querySelector('.valorP');
     const valorP = document.querySelector('.principal .selected .valor').innerHTML;
 
     const pedidoB = document.querySelector('.nomeB');
     const textoB = document.querySelector('.bebida .selected h2').innerHTML;
 
+    const totalB = document.querySelector('.valorB');
+    const valorB = document.querySelector('.bebida .selected .valor').innerHTML;
+
     const pedidoS = document.querySelector('.nomeS');
     const textoS = document.querySelector('.sobremesa .selected h2').innerHTML;
+
+    const totalS = document.querySelector('.valorS');
+    const valorS = document.querySelector('.sobremesa .selected .valor').innerHTML;
+
+    const totalTotal = document.querySelector('.valorT');
+
+    const precoP = valorP;
+    const precoP2 = precoP.split(" ");
+    const precoP3 = precoP2.pop();
+    const precoP4 = precoP3;toString();
+    const precoPF = +parseFloat(precoP4, 10);
+
+    const precoB = valorB;
+    const precoB2 = precoB.split(" ");
+    const precoB3 = precoB2.pop();
+    const precoB4 = precoB3.toString();
+    const precoBF = +parseFloat(precoB4, 10);
+
+    const precoS = valorS;
+    const precoS2 = precoS.split(" ");
+    const precoS3 = precoS2.pop();
+    const precoS4 = precoS3.toString();
+    const precoSF = +parseFloat(precoS4, 10);
 
     pedidoP.innerHTML = `${textoP}`;
     totalP.innerHTML = `${valorP}`;
     pedidoB.innerHTML = `${textoB}`;
+    totalB.innerHTML = `${valorB}`;
     pedidoS.innerHTML = `${textoS}`;
+    totalS.innerHTML = `${valorS}`;
+    const emNumeros = (precoPF+precoBF+precoSF);
+    totalTotal.innerHTML = emNumeros.toFixed(2);
 
     const aside = document.querySelector('aside');
 
