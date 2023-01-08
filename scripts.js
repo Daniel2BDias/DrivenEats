@@ -85,23 +85,25 @@ function confirmarPedido(){
 
     const totalTotal = document.querySelector('.valorT');
 
+    const fixed = 2;
+    const decimal = 10;
     const precoP = valorP;
     const precoP2 = precoP.split(" ");
     const precoP3 = precoP2.pop();
-    const precoP4 = precoP3;toString();
-    const precoPF = +parseFloat(precoP4, 10);
+    const precoP4 = precoP3.toString();
+    const precoPF = +parseFloat(precoP4, decimal);
 
     const precoB = valorB;
     const precoB2 = precoB.split(" ");
     const precoB3 = precoB2.pop();
     const precoB4 = precoB3.toString();
-    const precoBF = +parseFloat(precoB4, 10);
+    const precoBF = +parseFloat(precoB4, decimal);
 
     const precoS = valorS;
     const precoS2 = precoS.split(" ");
     const precoS3 = precoS2.pop();
     const precoS4 = precoS3.toString();
-    const precoSF = +parseFloat(precoS4, 10);
+    const precoSF = +parseFloat(precoS4, decimal);
 
     pedidoP.innerHTML = `${textoP}`;
     totalP.innerHTML = `${valorP}`;
@@ -110,7 +112,7 @@ function confirmarPedido(){
     pedidoS.innerHTML = `${textoS}`;
     totalS.innerHTML = `${valorS}`;
     const emNumeros = (precoPF+precoBF+precoSF);
-    totalTotal.innerHTML = emNumeros.toFixed(2);
+    totalTotal.innerHTML = emNumeros.toFixed(fixed);
 
     const aside = document.querySelector('aside');
 
