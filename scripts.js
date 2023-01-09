@@ -64,7 +64,7 @@ function selecionadoS(sobremesa){
 }
 
 function confirmarPedido(){
-
+   // transpoe dados para a tabela:
     const pedidoP = document.querySelector('.nomeP');
     const textoP = document.querySelector('.principal .selected h2').innerHTML;
 
@@ -84,7 +84,7 @@ function confirmarPedido(){
     const valorS = document.querySelector('.sobremesa .selected .valor').innerHTML;
 
     const totalTotal = document.querySelector('.valorT');
-
+   // calcula o preço total   
     const fixed = 2;
     const decimal = 10;
     const precoP = valorP;
@@ -105,30 +105,39 @@ function confirmarPedido(){
     const precoS4 = precoS3.toString();
     const precoSF = +parseFloat(precoS4, decimal);
 
-    pedidoP.innerHTML = `${textoP}`;
-    totalP.innerHTML = `${valorP}`;
-    pedidoB.innerHTML = `${textoB}`;
-    totalB.innerHTML = `${valorB}`;
-    pedidoS.innerHTML = `${textoS}`;
-    totalS.innerHTML = `${valorS}`;
-    const emNumeros = (precoPF+precoBF+precoSF);
-    totalTotal.innerHTML = emNumeros.toFixed(fixed);
+         pedidoP.innerHTML = `${textoP}`;
+         totalP.innerHTML = `${valorP}`;
+         pedidoB.innerHTML = `${textoB}`;
+         totalB.innerHTML = `${valorB}`;
+         pedidoS.innerHTML = `${textoS}`;
+         totalS.innerHTML = `${valorS}`;
+      const emNumeros = (precoPF+precoBF+precoSF);
+         totalTotal.innerHTML = emNumeros.toFixed(fixed);
+   // coleta os dados do cliente
+      const nomeCliente = prompt('Seu nome completo, por favor.');
 
+         document.querySelector('.nomeC').innerHTML = nomeCliente;
+
+      const endCliente = prompt('Endereço de entrega, por favor.');
+
+         document.querySelector('.enderecoC').innerHTML = endCliente;
+
+   //faz o resumo parecer e esmaece o fundo
     const aside = document.querySelector('aside');
 
-    aside.classList.remove('hidden');
+      aside.classList.remove('hidden');
 
     const blurcentral = document.querySelector('.central');
 
-    blurcentral.classList.add('blurout');
+      blurcentral.classList.add('blurout');
 
     const blurheader = document.querySelector('header');
 
-    blurheader.classList.add('blurout');
+      blurheader.classList.add('blurout');
 
     const blurfooter = document.querySelector('footer');
 
-    blurfooter.classList.add('blurout');
+      blurfooter.classList.add('blurout');
 
     
 }
@@ -137,17 +146,17 @@ function confirmarPedido(){
 function setHidden(){
     const toHide = document.querySelector('aside'); 
 
-    toHide.classList.add('hidden');
+      toHide.classList.add('hidden');
 
     const unblurcentral = document.querySelector('.central');
 
-    unblurcentral.classList.remove('blurout');
+      unblurcentral.classList.remove('blurout');
 
     const unblurheader = document.querySelector('header')
 
-    unblurheader.classList.remove('blurout');
+      unblurheader.classList.remove('blurout');
 
     const unblurfooter = document.querySelector('footer')
 
-    unblurfooter.classList.remove('blurout')
+      unblurfooter.classList.remove('blurout')
 }
