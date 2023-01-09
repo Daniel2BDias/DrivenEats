@@ -156,7 +156,7 @@ function confirmarPedido(){
    Total: R$ ${totalValor}`
    );
 
-   document.querySelector('a').setAttribute("href", `https://wa.me/5514998430701?text=${mensagemPadrao}`);
+   document.querySelector('a').setAttribute("href", `https://wa.me/5514999999999?text=${mensagemPadrao}`);
 }
 
 
