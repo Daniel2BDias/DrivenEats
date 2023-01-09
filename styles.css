@@ -273,6 +273,16 @@ aside .resumo .total {
     display: flex;
 }
 
+a {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
 aside button {
     background-color: #FFFFFF;
     color: #50D074;

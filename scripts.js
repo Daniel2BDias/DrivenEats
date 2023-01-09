@@ -106,11 +106,11 @@ function confirmarPedido(){
     const precoSF = +parseFloat(precoS4, decimal);
 
          pedidoP.innerHTML = `${textoP}`;
-         totalP.innerHTML = `${valorP}`;
+         totalP.innerHTML = `R$ ${valorP}`;
          pedidoB.innerHTML = `${textoB}`;
-         totalB.innerHTML = `${valorB}`;
+         totalB.innerHTML = `R$ ${valorB}`;
          pedidoS.innerHTML = `${textoS}`;
-         totalS.innerHTML = `${valorS}`;
+         totalS.innerHTML = `R$ ${valorS}`;
       const emNumeros = (precoPF+precoBF+precoSF);
          totalTotal.innerHTML = emNumeros.toFixed(fixed);
    // coleta os dados do cliente
@@ -139,7 +139,24 @@ function confirmarPedido(){
 
       blurfooter.classList.add('blurout');
 
-    
+    //prepara o link de envio
+
+    const prato = document.querySelector('.nomeP').innerHTML;
+    const bebida = document.querySelector('.nomeB').innerHTML;
+    const sobremesa = document.querySelector('.nomeS').innerHTML;
+    const totalValor = document.querySelector('.valorT').innerHTML;
+ 
+    const mensagemPadrao = encodeURIComponent(
+   `Olá, gostaria de fazer o pedido:
+   - Prato: ${prato}
+   - Bebida: ${bebida}
+   - Sobremesa: ${sobremesa}
+   - Nome: ${nomeCliente}
+   - Endereço: ${endCliente}
+   Total: R$ ${totalValor}`
+   );
+
+   document.querySelector('a').setAttribute("href", `https://wa.me/5514998430701?text=${mensagemPadrao}`);
 }
 
 
